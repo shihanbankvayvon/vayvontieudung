@@ -8,6 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Tải EmailJS SDK từ CDN -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         /* Tùy chỉnh font chữ Inter */
         body {
@@ -49,21 +52,21 @@
 <body class="bg-gray-100 text-gray-800">
 
     <!-- Phần Tiêu đề (Header) -->
-    <header class="bg-blue-800 text-white p-4 shadow-md">
+    <header class="bg-blue-800 text-white p-4 shadow-md sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center px-4">
             <!-- Logo hoặc Tên Ngân hàng -->
             <a href="#" class="flex items-center space-x-2 rounded-md hover:opacity-90 transition-opacity">
                 <!-- Logo Shinhanbank -->
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5elVhUYOTuNz5X2iEihWXzf3oexPmLts7mw&s" alt="Shinhanbank Logo" class="h-10 w-10 rounded-full object-contain bg-white p-1">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5elVhUYOTuNz5X2iEihWXzf3oexPmLts7mw&s" alt="Shinhanbank Logo" class="h-10 w-10 rounded-full object-contain bg-white p-1" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ffffff/000000?text=Logo';">
                 <span class="text-2xl font-bold text-blue-400">Shinhanbank</span>
             </a>
             <!-- Thanh điều hướng (Navigation) -->
-            <nav>
+            <nav class="hidden md:block">
                 <ul class="flex space-x-6">
                     <li><a href="#intro-section" class="hover:text-blue-200 transition-colors rounded-md py-1 px-2">Giới thiệu</a></li>
                     <li><a href="#product-details-section" class="hover:text-blue-200 transition-colors rounded-md py-1 px-2">Sản phẩm & Dịch vụ</a></li>
                     <li><a href="#features-section" class="hover:text-blue-200 transition-colors rounded-md py-1 px-2">Ưu đãi</a></li>
-                    <li><a href="https://zalo.me/0896535272" target="_blank" class="hover:text-blue-200 transition-colors rounded-md py-1 px-2">Liên hệ</a></li>
+                    <li><a href="https://zalo.me/0799251824" target="_blank" class="hover:text-blue-200 transition-colors rounded-md py-1 px-2">Liên hệ</a></li>
                 </ul>
             </nav>
         </div>
@@ -130,7 +133,7 @@
             <h2 class="text-2xl font-bold mb-4 text-blue-700">Bạn có câu hỏi?</h2>
             <p class="text-gray-700 mb-6">Liên hệ với chúng tôi để được tư vấn chi tiết về các sản phẩm và dịch vụ.</p>
             <!-- Nút "Tư vấn ngay" đã được bọc trong thẻ <a> -->
-            <a href="https://zalo.me/0896535272" target="_blank" class="inline-block bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700 transition-colors shadow">
+            <a href="https://zalo.me/0799251824" target="_blank" class="inline-block bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700 transition-colors shadow">
                 <span>Tư vấn ngay</span>
             </a>
         </section>
@@ -173,7 +176,7 @@
                     </select>
                 </div>
                 <div class="flex justify-center">
-                    <button type="submit" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition-colors transform hover:scale-105 w-full">
+                    <button type="submit" id="submit-button" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition-colors transform hover:scale-105 w-full">
                         Gửi hồ sơ
                     </button>
                 </div>
@@ -191,14 +194,14 @@
             <hr class="my-6 border-t border-gray-200">
             
             <!-- Phần thông báo "Bạn muốn giải ngân nhanh hơn?" trong hình tròn -->
-            <div class="bg-blue-100 p-6 rounded-full flex flex-col items-center justify-center text-center mx-auto mb-6 max-w-sm">
+            <div class="bg-blue-100 p-6 rounded-2xl flex flex-col items-center justify-center text-center mx-auto mb-6 max-w-sm">
                 <h3 class="text-xl font-semibold mb-2 text-blue-700">Bạn muốn giải ngân nhanh hơn?</h3>
                 <p class="text-gray-700">
                     Bạn có thể liên hệ trực tiếp nhân viên tư vấn của Shinhanbank để được hỗ trợ giải ngân nhanh chóng hơn.
                 </p>
             </div>
 
-            <a href="https://zalo.me/0896535272" target="_blank" class="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition-colors transform hover:scale-105">
+            <a href="https://zalo.me/0799251824" target="_blank" class="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-700 transition-colors transform hover:scale-105">
                 <span>Liên hệ tư vấn viên (Zalo)</span>
             </a>
         </section>
@@ -214,10 +217,22 @@
             </div>
             <!-- Logo Shinhanbank ở chân trang -->
             <div class="mt-4">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5elVhUYOTuNz5X2iEihWXzf3oexPmLts7mw&s" alt="Shinhanbank Footer Logo" class="h-10 w-10 mx-auto rounded-full object-contain bg-white p-1">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5elVhUYOTuNz5X2iEihWXzf3oexPmLts7mw&s" alt="Shinhanbank Footer Logo" class="h-10 w-10 mx-auto rounded-full object-contain bg-white p-1" onerror="this.onerror=null;this.src='https://placehold.co/40x40/ffffff/000000?text=Logo';">
             </div>
         </div>
     </footer>
+    
+    <!-- Modal thông báo lỗi -->
+    <div id="error-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-6 rounded-lg shadow-xl max-w-sm text-center">
+            <h3 class="text-xl font-bold text-red-600 mb-4">Lỗi!</h3>
+            <p id="error-message" class="text-gray-700 mb-6">Đã xảy ra lỗi khi gửi hồ sơ. Vui lòng thử lại sau.</p>
+            <button id="close-error-modal" class="bg-red-500 text-white font-bold py-2 px-6 rounded-full hover:bg-red-600 transition-colors">
+                Đóng
+            </button>
+        </div>
+    </div>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -237,6 +252,27 @@
             const loanAmountInput = document.getElementById('loan-amount'); // Lấy tham chiếu đến input số tiền
             const decrementBtn = document.getElementById('decrement-loan'); // Nút giảm
             const incrementBtn = document.getElementById('increment-loan'); // Nút tăng
+            const submitButton = document.getElementById('submit-button');
+            
+            // Modal elements
+            const errorModal = document.getElementById('error-modal');
+            const errorMessage = document.getElementById('error-message');
+            const closeErrorModalBtn = document.getElementById('close-error-modal');
+
+
+            // Hàm hiển thị modal lỗi
+            function showErrorModal(message) {
+                errorMessage.textContent = message || 'Đã xảy ra lỗi khi gửi hồ sơ. Vui lòng thử lại sau.';
+                errorModal.classList.remove('hidden');
+            }
+
+            // Hàm ẩn modal lỗi
+            function hideErrorModal() {
+                errorModal.classList.add('hidden');
+            }
+            
+            closeErrorModalBtn.addEventListener('click', hideErrorModal);
+
 
             // Hàm định dạng số tiền thành chuỗi có dấu chấm ngăn cách
             function formatNumberWithCommas(number) {
@@ -292,6 +328,11 @@
             loanApplicationForm.addEventListener('submit', function(event) {
                 event.preventDefault(); // Ngăn chặn việc gửi form mặc định
                 
+                // Vô hiệu hóa nút gửi và hiển thị trạng thái đang tải
+                submitButton.disabled = true;
+                submitButton.textContent = 'Đang gửi...';
+                submitButton.classList.add('opacity-50', 'cursor-not-allowed');
+
                 // Gửi email bằng EmailJS
                 // Thay thế 'YOUR_SERVICE_ID' và 'YOUR_TEMPLATE_ID' bằng ID của bạn từ EmailJS
                 // 'this' tham chiếu đến form hiện tại, sẽ lấy giá trị đã định dạng từ input có name="loan_amount"
@@ -306,7 +347,13 @@
                         loanApplicationForm.reset(); // Xóa dữ liệu trong form
                     }, function(error) {
                         console.error('FAILED...', error);
-                        alert('Đã xảy ra lỗi khi gửi hồ sơ. Vui lòng thử lại sau.');
+                        showErrorModal('Đã xảy ra lỗi khi gửi hồ sơ. Vui lòng kiểm tra lại thông tin và thử lại.');
+                    })
+                    .finally(function() {
+                        // Kích hoạt lại nút gửi và khôi phục văn bản
+                        submitButton.disabled = false;
+                        submitButton.textContent = 'Gửi hồ sơ';
+                        submitButton.classList.remove('opacity-50', 'cursor-not-allowed');
                     });
             });
         });
